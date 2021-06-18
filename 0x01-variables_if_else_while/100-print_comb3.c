@@ -1,30 +1,37 @@
 #include <stdio.h>
 
 /**
-* main - Print combinations of two digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - print number compos that are unique\n.
+ * Description: can't use a variable with type char.
+ * Return: 0
+ */
+
 int main(void)
 {
-  int tens;
-  int ones;
+	int i, j;
 
-  for (tens = 0; tens <= 9; tens++)
-    {
-      for (ones = tens + 1; ones <= 9; ones++)
+	i = 0;
+	j = 0;
+
+	while (i < 9)
 	{
-	  putchar(tens + '0');
-	  putchar(ones + '0');
+		j = i + 1;
+		while (j < 10)
+		{
+			putchar('0' + i);
+			putchar('0' + j);
 
-	  if (tens < 8)
-	    {
-	      putchar(',');
-	      putchar(' ');
-	    }
+			if (i < 8 || j < 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+		}
+		++i;
 	}
-    }
-  putchar('\n');
 
-  return (0);
+	putchar('\n');
+
+	return (0);
 }
