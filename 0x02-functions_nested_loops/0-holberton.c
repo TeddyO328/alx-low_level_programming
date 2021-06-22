@@ -1,20 +1,22 @@
 #include "holberton.h"
 
 /**
- * main - Print holberton
+ * main - Print text
  *
- * Return: Always 0 (Success)
+ * Return: 0 for success
+ *
  */
+
 int main(void)
 {
-char *h_name = "Holberton";
-int i;
+	char *sh = "Holberton";
 
-for (i = 0; i <= 10; i++)
-{
-_putchar(h_name[i]);
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
+	return (0);
+}
 
-}
-_putchar('\n');
-return (0);
-}
