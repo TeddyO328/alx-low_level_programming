@@ -1,20 +1,20 @@
 #include "holberton.h"
 
 /**
-* main - Print the word "Holberton"
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
 	int i;
-	char p[] = "Holberton";
+	char word[] = "Holberton";
 
 	for (i = 0; i < 9; i++)
-		{
-		_putchar(p[i]);
-		}
-		_putchar('\n');
+	{
+		_putchar(word[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
