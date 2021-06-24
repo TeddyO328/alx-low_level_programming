@@ -1,12 +1,16 @@
+
 #include "holberton.h"
 
 /**
-* print_numbers - function that prints the numbers, from 0 to 9.
-*/
+ * print_numbers - prints the numbers, from 0 to 9
+ *
+ * Return: Nothing
+ */
 void print_numbers(void)
 {
-	char c;
+	int i;
 
-	for (c = '0'; c <= '9'; c++)
-	_putchar(c);
+	for (i = 0; i <= 9; i++)
+		_putchar(i + '0');
 	_putchar('\n');
+}
