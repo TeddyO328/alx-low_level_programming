@@ -346,7 +346,7 @@ Repo:
 GitHub repository: alx-low_level_programming
 Directory: 0x05-pointers_arrays_strings
 File: 9-strcpy.c
-
+   
 10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers
 #advanced
 Write a function that convert a string to an integer.
