@@ -148,6 +148,6 @@ Create a program that generates random valid passwords for the program 101-crack
  
 Repo:
 
-GitHub repository: alx-low_level_programming
-Directory: 0x05-pointers_arrays_strings
-File: 101-keygen.c
+- GitHub repository: alx-low_level_programming
+- Directory: 0x05-pointers_arrays_strings
+- File: 101-keygen.c
