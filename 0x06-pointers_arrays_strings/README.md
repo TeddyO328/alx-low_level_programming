@@ -122,9 +122,9 @@ Write a function that encodes a string using rot13.
 
 Repo:
 
-GitHub repository: alx-low_level_programming
-Directory: 0x06-pointers_arrays_strings
-File: 100-rot13.c
+- GitHub repository: alx-low_level_programming
+- Directory: 0x06-pointers_arrays_strings
+- File: 100-rot13.c
   
 # 9. Numbers have life; they're not just symbols on paper
 
