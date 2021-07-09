@@ -1,2 +1,3 @@
-!<arch>
-holberton.h/    1570965666  1000  1000  100664  0         `
+#!/bin/bash
+gcc -c *.c
+ar rc liball.a *.o
