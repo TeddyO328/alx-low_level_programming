@@ -1,54 +1,57 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * _memcpy - copy memory data from src to dest
+ * @dest: memory destination
+ * @src: memory source
+ * @n: size of new memory
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+void _memcpy(void *dest, void *src, size_t n)
 {
-  unsigned int i;
+	size_t i;
+	char *csrc = (char *)src;
+	char *cdest = (char *)dest;
 
-  i = 0;
-  while (i < size)
-    {
-      if (i % 10)
-        {
-	  printf(" ");
-        }
-      if (!(i % 10) && i)
-        {
-	  printf("\n");
-        }
-      printf("0x%02x", buffer[i]);
-      i++;
-    }
-  printf("\n");
+	for (i = 0; i < n; i++)
+		cdest[i] = csrc[i];
 }
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * *_realloc - reallocates a memory block using malloc and free
+ * @ptr: array length
+ * @old_size: size of old memory
+ * @new_size: size of new memory
+ * Return: pointer to new memory
  */
-int main(void)
-{
-  char *p;
-  int i;
 
-  p = malloc(sizeof(char) * 10);
-  p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
-  i = 0;
-  while (i < 98)
-    {
-      p[i++] = 98;
-    }
-  simple_print_buffer(p, 98);
-  free(p);
-  return (0);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+{
+
+void *newPtr;
+if (new_size == 0)
+{
+	if (ptr != NULL)
+		free(ptr);
+	return (NULL);
+}
+else if (!ptr)
+{
+	return (malloc(new_size));
+}
+else if (new_size <= old_size)
+{
+	return (ptr);
+}
+else
+{
+	newPtr = malloc(new_size);
+	if (newPtr)
+	{
+		_memcpy(newPtr, ptr, old_size);
+		free(ptr);
+	}
+	return (newPtr);
+}
+
+return (0);
 }
