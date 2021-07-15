@@ -1,60 +1,54 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
-
-
+#include <string.h>
 
 /**
- * _memcpy - copies memory area
- * @dest: destination string
- * @src: source string
- * @n: number of bytes to be copied
- * Return: pointer to dest
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+void simple_print_buffer(char *buffer, unsigned int size)
 {
-	char *r = dest;
+  unsigned int i;
 
-	while (n--)
-		*dest++ = *src++;
-	return (r);
+  i = 0;
+  while (i < size)
+    {
+      if (i % 10)
+        {
+	  printf(" ");
+        }
+      if (!(i % 10) && i)
+        {
+	  printf("\n");
+        }
+      printf("0x%02x", buffer[i]);
+      i++;
+    }
+  printf("\n");
 }
 
-
-
 /**
- * *_realloc - reallocates a memory block using malloc and free
- * @ptr: pointer to previously allocated memory
- * @old_size: pointer's size
- * @new_size: it's new size after realocating new memory
- * Return: If new_size == old_size do not do anything and return ptr
- * If new_size is equal to zero, and ptr is not NULL Return Null
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
-
-
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+int main(void)
 {
-	void *p;
+  char *p;
+  int i;
 
-	if (new_size == old_size)
-		return (ptr);
-	if (ptr == NULL)
-	{
-		free(ptr);
-		p = malloc(new_size);
-		return (p);
-	}
-
-	if (new_size == 0)
-	{
-		free(ptr);
-		return (NULL);
-	}
-
-	p = malloc(new_size);
-
-	_memcpy(p, ptr, old_size);
-
-	free(ptr);
-
-	return p;
+  p = malloc(sizeof(char) * 10);
+  p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+  i = 0;
+  while (i < 98)
+    {
+      p[i++] = 98;
+    }
+  simple_print_buffer(p, 98);
+  free(p);
+  return (0);
 }
