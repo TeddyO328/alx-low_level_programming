@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <stdlib.h>
 #include <string.h>
 
@@ -50,4 +51,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	password[6] = '\0';
 	printf("%s", password);
 	return (0);
+=======
+#include "lists.h"
+
+/**
+ * keygen print a valid key for the username
+ * Return: key of the username
+ **/
+
+int main()
+{
+  return (key);
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 }

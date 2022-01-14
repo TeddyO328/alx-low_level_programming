@@ -45,4 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str[i] = '\0';
 	return (str);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382

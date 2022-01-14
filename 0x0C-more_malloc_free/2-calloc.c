@@ -31,12 +31,21 @@ void *m;
 
 if (size == 0 || nmemb == 0)
 	return (NULL);
+<<<<<<< HEAD
 m = malloc(sizeof(int) * nmemb);
+=======
+
+m = malloc(nmemb * size);
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 
 if (m == 0)
 	return (NULL);
 
+<<<<<<< HEAD
 _memset(m, 0, nmemb * sizeof(int));
+=======
+_memset(m, 0, nmemb * size);
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 
 return (m);
 }

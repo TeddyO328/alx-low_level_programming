@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 
 /**
  * main - finds and prints the largest prime factor of the number
@@ -23,4 +24,25 @@ divisor += 1;
 }
 printf("%ld\n", larg_prim);
 return (0);
+=======
+/**
+* main - entry block
+* @void: no argument
+* Return: 0
+*/
+int main(void)
+{
+	long i, number = 612852475143;
+
+	for (i  = 2; i <= number; i++)
+	{
+		if (number % i == 0)
+		{
+			number = number / i;
+			i--;
+		}
+	}
+	printf("%lu\n", i);
+	return (0);
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 }

@@ -1,4 +1,5 @@
 #include "holberton.h"
+<<<<<<< HEAD
 
 /**
  * *_strchr - fills memory with a constant byte.
@@ -20,4 +21,29 @@ char *_strchr(char *s, char c)
 	}
 
 	return ('\0');
+=======
+#include <stdio.h>
+
+/**
+ * _strchr - locates a character in a string
+ * @s: string to be searched
+ * @c: target char
+ * Return: pointer to first occurrence of c or NULL if char not found
+ */
+char *_strchr(char *s, char c)
+{
+
+	while (*s)
+	{
+		if (c == *s)
+		{
+			return (s);
+		}
+		s++;
+	}
+	if (!c)
+		return (s);
+	return (NULL);
+
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 }

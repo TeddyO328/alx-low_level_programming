@@ -1,4 +1,5 @@
 #include "holberton.h"
+<<<<<<< HEAD
 
 /**
  * print_line - check for a digit
@@ -18,4 +19,17 @@ void print_line(int n)
 	}
 	_putchar('\n');
 
+=======
+/**
+* print_line - Write a function that draws a straight line in the terminal.
+* @n: Integer amount of _
+*/
+void print_line(int n)
+{
+	char c;
+
+	for (c = 0; c < n; c++)
+		_putchar('_');
+	_putchar('\n');
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 }

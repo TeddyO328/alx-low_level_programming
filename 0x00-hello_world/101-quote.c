@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 /**
  * main - prints to string
  *
@@ -20,4 +21,20 @@ __asm__ ("syscall"
 "S" (s),
 "d" (l));
 return (1);
+=======
+#include <unistd.h>
+
+/**
+ * main - Entry point
+ *
+ * Description: 'and that piece of art is useful" - Dora Korpar, 2015-10-19'
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 }

@@ -22,4 +22,8 @@ main:
 	syscall
 
 	section .data
+<<<<<<< HEAD
 message: db	"Hello, Holberton", 10
+=======
+message: db	"Hello, Holberton", 10
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382

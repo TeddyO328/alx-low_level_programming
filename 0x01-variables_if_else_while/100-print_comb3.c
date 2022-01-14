@@ -1,4 +1,5 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include <stdlib.h>
 /**
  * main - main block
@@ -43,5 +44,41 @@ int main(void)
 		d++;
 	}
 	putchar('\n');
+=======
+
+/**
+ * main - print number compos that are unique\n.
+ * Description: can't use a variable with type char.
+ * Return: 0
+ */
+
+int main(void)
+{
+	int i, j;
+
+	i = 0;
+	j = 0;
+
+	while (i < 9)
+	{
+		j = i + 1;
+		while (j < 10)
+		{
+			putchar('0' + i);
+			putchar('0' + j);
+
+			if (i < 8 || j < 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+		}
+		++i;
+	}
+
+	putchar('\n');
+
+>>>>>>> a77d10a15e5d1a12b1b493c9797b66598eaab382
 	return (0);
 }
